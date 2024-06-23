@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends - Player Stats</title>
+    <link rel="stylesheet" href="/public/players/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>League of Legends - Player Stats</h1>
+        <input type="text" id="playerName" placeholder="Enter player name">
+        <button id="fetchData">Fetch Data</button>
+        <select id="championFilter">
+            <option value="">All Champions</option>
+        </select>
+        <table id="statsTable">
+            <thead>
+                <tr>
+                    <th>Champion</th>
+                    <th>KDA</th>
+                    <th>Date</th>
+                    <th>Tournament</th>
+                    <th id="win_col">Win</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="/public/players/script.js"></script>
+</body>
+</html>
