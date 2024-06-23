@@ -1,4 +1,4 @@
-from api.routes import Match, Players, PlayersPage
+from api.routes import Players, PlayersPage
 
 from aiohttp import ClientSession, web
 
@@ -13,7 +13,6 @@ async def main():
     app["leaguepedia_url"] = "https://lol.fandom.com/api.php"
 
     # API routes
-    app.router.add_get("/api/match", Match)
     app.router.add_get("/api/players", Players)
 
     # Common routes
@@ -29,7 +28,7 @@ async def main():
         site = web.TCPSite(runner, "0.0.0.0", SERVER_PORT)
         await site.start()
 
-        print(f"Servidor iniciado. Porta: {SERVER_PORT}")
+        print(f"Server started. Port: {SERVER_PORT}")
         
         while True:
             await asyncio.sleep(3600.0)
